@@ -2,6 +2,8 @@
 """ENTER YOUR SOLUTION HERE!"""
 
 def checkPrime(num):
+    if num == 2:
+        return True
     if num > 2:
         for n in range(2, num):
             if (num % n) == 0:
@@ -13,8 +15,8 @@ def primes(number_of_primes):
     list = []
     n = 2
     while len(list) != number_of_primes:
-        n +=1
         if checkPrime(n):
             list.append(n)
+        n +=1
 
     return list
